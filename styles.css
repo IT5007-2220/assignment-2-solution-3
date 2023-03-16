@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600&display=swap');
+
+body {
+    justify-content: center;
+    display: flex;
+}
+
+/* utility */
+.container {
+    width: 80%;
+}
+
+.row {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    flex-wrap: wrap;
+}
+
+/* tables */
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: 'Noto Sans', semi-bold;
+    color: #1B1B1E;
+}
+
+th, td {
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+tbody > tr:hover {
+    background-color: #58A4B0;
+}
+
+table {
+    margin: auto;
+    border-radius:6px;
+    width: 100%;
+    padding: 0;
+    margin-left: 10px;
+    text-align:center;
+}
+
+#outstandingTable>thead>tr {
+    background-color:#FFBF00;
+}
+
+#completedTable>thead>tr {
+    background-color:#DAF7A6;
+}
+
+#completeForm {
+    width: 60%
+}
+
+/* Inputs */
+.inputs, select, input[type=datetime-local] {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 25%;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+}
+select {
+    width: 15%;
+    font-size: 15px
+}
+
+button {
+    background-color: white;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #58A4B0;
+}
+
+.inputs:focus {
+    outline-color: lightblue;
+}
+
+/* Navbar */
+.navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 20px;
+     background-color: teal;
+     color: #fff;
+}
+
+.nav-links a {
+     color: #000;
+}
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.menu li {
+    padding: 5px 14px;
+    list-style: none;
+    width: 80px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+.section {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.section.hidden {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.dataSection {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2em;
+}
+
+.alert {
+    border-radius: 10px;
+    margin-bottom: 0px;
+    display: none;
+}
+.alert.error {
+    display: flex;
+    background-color: #f8d7da;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.alert.success{
+    display: flex;
+    background-color: #d4edda;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Table</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h2>Todos</h2>
+        </div>
+        <div class="row">
+            <div class="menu nav-links">
+                <li onclick="handleOnClick(this)" data-section="add">Add</li>
+                <li onclick="handleOnClick(this)" data-section="finish">Finish</li>
+                <li onclick="handleOnClick(this)" data-section="display">Display</li>
+            </div>
+        </div>
+        <div class="dataSection">
+            <div class="row section hidden" id="add" data-section="add">
+                <input id='todo' type="text" class="inputs" placeholder="Click here to a Todo">
+                <select id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <input type="datetime-local" id="date">
+                <button class="submitButton" onclick="getFormData()">Submit</button>
+            </div>
+            <div class="row section hidden" id="finish" data-section="finish">
+                <select id="completeForm">
+                </select>
+                <button onclick="markComplete()">Mark Complete</button>
+            </div>
+            <div class="row">
+                <div class="row alert" id="alert">
+                    <p id="message">Test</p>
+                </div>
+                <table class="table" id="outstandingTable">
+                    <thead>
+                        <tr>
+                            <th colspan="4">Outstanding</th>
+                        </tr>
+                        <tr>
+                            <th>Serial No.</th>
+                            <th>Task Name</th>
+                            <th>Priority</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <table class="table" id="completedTable">
+                    <thead>
+                    <tr>
+                        <th colspan="4">Completed</th>
+                    </tr>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Task Name</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
